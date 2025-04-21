@@ -1,0 +1,65 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  box-sizing: content-box;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+}
+main {
+  height: 99vh;
+  background-image: url("https://media.istockphoto.com/id/921135170/vector/cloudscape-blue-sky-with-clouds-and-sun-paper-art-style.jpg?s=2048x2048&w=is&k=20&c=Ci3eV8TvqYsYSxc535V4uF4F6fy1FcnMCAf94j8wPOo=");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  width: 50%;
+  gap: 0.5em;
+}
+main div input {
+  height: 3em;
+  width: 60%;
+}
+main div button {
+  padding: 1em;
+  width: 10%;
+}
+main section {
+  border: 2px solid black;
+  height: 40%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  order: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  align-items: center;
+}
+main section ul {
+  order: 0;
+}
+.heading {
+  color: rgb(255, 174, 0);
+  font-size: 3rem;
+}
+#btn:hover{
+background: rgb(255, 174, 0);
+transition: all .4s;
+color: white;
+}
