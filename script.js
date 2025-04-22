@@ -1,6 +1,15 @@
 let cityName = document.querySelector("#cityName");
 btn.addEventListener("click", (e) => {
   e.preventDefault();
+
+  if (cityName.value == "") {
+    return alert("Please enter city Name");
+  }
+
+  // Clear old data before adding new
+  let append1 = document.querySelector("#main-section");
+  append1.innerHTML = "";
+
   const obj = {
     city: cityName.value.toUpperCase(),
     Humidity: "19%",
@@ -12,9 +21,7 @@ btn.addEventListener("click", (e) => {
     MoonPhase: "Last Quarter",
     celcius: "30-35",
   };
-  if (cityName.value == "") {
-    return alert("Please enter city Name");
-  }
+
   let cityNameNew = document.createElement("h3");
   cityNameNew.innerText = obj.city + ", India";
   cityNameNew.className = "cityname";
@@ -23,7 +30,7 @@ btn.addEventListener("click", (e) => {
   elm1.innerText = "Humidity " + obj.Humidity;
 
   let elm2 = document.createElement("p");
-  elm2.innerText = `Weather Today in ${obj.city} India`;
+  elm2.innerText = `Weather Today in ${obj.city} ,India`;
 
   let elm3 = document.createElement("span");
   elm3.innerText = "Feels Like";
@@ -42,7 +49,6 @@ btn.addEventListener("click", (e) => {
   let elm7 = document.createElement("li");
   elm7.innerText = `Wind : ${obj.Wind}`;
 
-  let append1 = document.querySelector("#main-section");
   append1.appendChild(cityNameNew);
   append1.appendChild(elm1);
   append1.appendChild(elm2);
